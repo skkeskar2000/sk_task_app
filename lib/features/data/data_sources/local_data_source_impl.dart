@@ -70,7 +70,11 @@ class LocalDataSourceImpl implements LocalDataSource {
       final dateTime = DateTime.parse(task.time);
       final androidChannel = AndroidNotificationDetails(
           task.id.toString(), "daily task notification",
-          icon: "@mipmap/ic_launcher");
+          icon: "@mipmap/ic_launcher",
+          playSound: true,
+          importance: Importance.max,
+          priority: Priority.high
+      );
       const iosChannel = IOSNotificationDetails();
 
       final notificationDetails = NotificationDetails(
