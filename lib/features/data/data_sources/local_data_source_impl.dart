@@ -38,7 +38,6 @@ class LocalDataSourceImpl implements LocalDataSource {
             isNotification: task.isNotification,
             taskType: task.taskType)
         .toJson();
-    print(newTask);
     _taskStore.add(await _db, newTask);
   }
 
